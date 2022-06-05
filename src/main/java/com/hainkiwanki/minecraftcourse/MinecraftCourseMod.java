@@ -1,5 +1,6 @@
 package com.hainkiwanki.minecraftcourse;
 
+import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -31,6 +32,7 @@ public class MinecraftCourseMod
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
         eventBus.addListener(this::setup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

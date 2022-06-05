@@ -1,4 +1,11 @@
 {
   "item.minecraftcourse.cobalt_ingot": "Cobalt Ingot",
-  "item.minecraftcourse.cobalt_nugget": "Cobalt Nugget"
+  "item.minecraftcourse.cobalt_nugget": "Cobalt Nugget",
+  "item.minecraftcourse.raw_cobalt": "Raw Cobalt",
+
+
+  "block.minecraftcourse.cobalt_block": "Cobalt Block",
+  "block.minecraftcourse.cobalt_ore": "Cobalt Ore",
+  "block.minecraftcourse.raw_cobalt_block": "Raw Cobalt Block",
+  "block.minecraftcourse.deepslate_cobalt_ore": "Deepslate Cobalt Block"
 }
