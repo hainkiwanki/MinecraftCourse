@@ -7,5 +7,8 @@
   "block.minecraftcourse.cobalt_block": "Cobalt Block",
   "block.minecraftcourse.cobalt_ore": "Cobalt Ore",
   "block.minecraftcourse.raw_cobalt_block": "Raw Cobalt Block",
-  "block.minecraftcourse.deepslate_cobalt_ore": "Deepslate Cobalt Block"
+  "block.minecraftcourse.deepslate_cobalt_ore": "Deepslate Cobalt Block",
+
+
+  "itemGroup.coursemodtab": "Course Tab"
 }
