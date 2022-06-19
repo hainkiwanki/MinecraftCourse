@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rools": "1",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraftcourse:raw_cobalt_block"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraftcourse:cobalt_block",
+    "minecraftcourse:raw_cobalt_block",
+    "minecraftcourse:cobalt_ore",
+    "minecraftcourse:deepslate_cobalt_ore"
+  ]
+}
