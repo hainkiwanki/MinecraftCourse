@@ -2,6 +2,7 @@
   "item.minecraftcourse.cobalt_ingot": "Cobalt Ingot",
   "item.minecraftcourse.cobalt_nugget": "Cobalt Nugget",
   "item.minecraftcourse.raw_cobalt": "Raw Cobalt",
+  "tem.minecraftcourse.dowsing_rod.no_valuables": "Dowsing Rod",
 
 
   "block.minecraftcourse.cobalt_block": "Cobalt Block",
@@ -10,5 +11,7 @@
   "block.minecraftcourse.deepslate_cobalt_ore": "Deepslate Cobalt Block",
 
 
-  "itemGroup.coursemodtab": "Course Tab"
+  "itemGroup.coursemodtab": "Course Tab",
+
+  "item.minecraftcourse.dowsing_rod.no_valuables": "No valuables found!"
 }
