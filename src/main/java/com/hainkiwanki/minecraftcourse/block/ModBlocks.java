@@ -1,6 +1,7 @@
 package com.hainkiwanki.minecraftcourse.block;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
+import com.hainkiwanki.minecraftcourse.block.custom.SpeedyBlock;
 import com.hainkiwanki.minecraftcourse.item.ModCreativeModeTab;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -42,6 +43,12 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties
                     .of(Material.STONE)
                     .strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties
+                    .of(Material.STONE)
+                    .strength(2f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
