@@ -13,6 +13,9 @@
   "block.minecraftcourse.deepslate_cobalt_ore": "Deepslate Cobalt Block",
   "block.minecraftcourse.speedy_block": "Speedy Block",
 
+  "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
+  "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",
+  "tooltip.block.speedy_block" : "It speeds you up",
 
   "itemGroup.coursemodtab": "Course Tab",
 
