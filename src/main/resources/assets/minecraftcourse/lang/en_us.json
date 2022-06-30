@@ -2,7 +2,9 @@
   "item.minecraftcourse.cobalt_ingot": "Cobalt Ingot",
   "item.minecraftcourse.cobalt_nugget": "Cobalt Nugget",
   "item.minecraftcourse.raw_cobalt": "Raw Cobalt",
-  "tem.minecraftcourse.dowsing_rod.no_valuables": "Dowsing Rod",
+  "item.minecraftcourse.dowsing_rod": "Dowsing Rod",
+  "item.minecraftcourse.coal_sliver": "Coal Sliver",
+  "item.minecraftcourse.turnip": "Turnip",
 
 
   "block.minecraftcourse.cobalt_block": "Cobalt Block",
