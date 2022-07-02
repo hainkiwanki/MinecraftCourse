@@ -14,6 +14,8 @@
   "block.minecraftcourse.speedy_block": "Speedy Block",
   "block.minecraftcourse.cobalt_slab": "Cobalt Slab",
   "block.minecraftcourse.cobalt_stairs": "Cobalt Stairs",
+  "block.minecraftcourse.cobalt_pressure_plate": "Cobalt Pressure Plate",
+  "block.minecraftcourse.cobalt_button": "Cobalt Button",
 
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",

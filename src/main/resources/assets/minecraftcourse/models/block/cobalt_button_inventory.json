@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "minecraftcourse:block/cobalt_block"
+  }
+}
