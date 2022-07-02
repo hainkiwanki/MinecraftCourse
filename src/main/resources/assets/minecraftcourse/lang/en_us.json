@@ -12,6 +12,8 @@
   "block.minecraftcourse.raw_cobalt_block": "Raw Cobalt Block",
   "block.minecraftcourse.deepslate_cobalt_ore": "Deepslate Cobalt Block",
   "block.minecraftcourse.speedy_block": "Speedy Block",
+  "block.minecraftcourse.cobalt_slab": "Cobalt Slab",
+  "block.minecraftcourse.cobalt_stairs": "Cobalt Stairs",
 
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",

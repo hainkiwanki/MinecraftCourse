@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "minecraftcourse:block/cobalt_slab"
+    },
+    "type=double": {
+      "model": "minecraftcourse:block/cobalt_block"
+    },
+    "type=top": {
+      "model": "minecraftcourse:block/cobalt_slab_top"
+    }
+  }
+}
