@@ -19,6 +19,8 @@
   "block.minecraftcourse.cobalt_fence": "Cobalt Fence",
   "block.minecraftcourse.cobalt_fence_gate": "Cobalt Fance Gate",
   "block.minecraftcourse.cobalt_wall": "Cobalt Wall",
+  "block.minecraftcourse.cherry_blossom_door": "Cherry Blossom Door",
+  "block.minecraftcourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
 
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",
