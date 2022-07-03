@@ -1,10 +1,7 @@
 package com.hainkiwanki.minecraftcourse.item;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
-import com.hainkiwanki.minecraftcourse.item.custom.CoalSliverItem;
-import com.hainkiwanki.minecraftcourse.item.custom.DowsingRodItem;
-import com.hainkiwanki.minecraftcourse.item.custom.LevitationSwordItem;
-import com.hainkiwanki.minecraftcourse.item.custom.PaxelItem;
+import com.hainkiwanki.minecraftcourse.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -56,7 +53,7 @@ public class ModItems {
             () -> new PaxelItem(ModTiers.COBALT, 0, 0f, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_HELMET = ITEMS.register("cobalt_helmet",
-            () -> new ArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+            () -> new ModArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
     public static final RegistryObject<Item> COBALT_CHESTPLATE = ITEMS.register("cobalt_chestplate",
             () -> new ArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
     public static final RegistryObject<Item> COBALT_LEGGINGS = ITEMS.register("cobalt_leggings",
