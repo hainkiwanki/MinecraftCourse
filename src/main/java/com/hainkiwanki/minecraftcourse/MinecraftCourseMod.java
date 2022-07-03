@@ -3,6 +3,7 @@ package com.hainkiwanki.minecraftcourse;
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
+import com.hainkiwanki.minecraftcourse.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
@@ -47,6 +48,8 @@ public class MinecraftCourseMod
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_TRAPDOOR.get(), RenderType.cutout());
+
+        ModItemProperties.addCustomItemPorperties();
     }
 
     private void setup(final FMLCommonSetupEvent event)

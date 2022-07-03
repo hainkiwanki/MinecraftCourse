@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "minecraftcourse:item/data_tablet_off"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "minecraftcourse:on": 1
+      },
+      "model": "minecraftcourse:item/data_tablet_on"
+    }
+  ]
 }
