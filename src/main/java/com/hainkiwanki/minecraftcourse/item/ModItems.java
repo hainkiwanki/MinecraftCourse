@@ -3,6 +3,7 @@ package com.hainkiwanki.minecraftcourse.item;
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.item.custom.CoalSliverItem;
 import com.hainkiwanki.minecraftcourse.item.custom.DowsingRodItem;
+import com.hainkiwanki.minecraftcourse.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -48,4 +49,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> COBALT_HOE = ITEMS.register("cobalt_hoe",
             () -> new HoeItem(ModTiers.COBALT, 0, 0f, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+
+    public static final RegistryObject<Item> COBALT_PAXEL = ITEMS.register("cobalt_paxel",
+            () -> new PaxelItem(ModTiers.COBALT, 0, 0f, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 }
