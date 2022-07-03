@@ -3,6 +3,7 @@ package com.hainkiwanki.minecraftcourse.item;
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.item.custom.CoalSliverItem;
 import com.hainkiwanki.minecraftcourse.item.custom.DowsingRodItem;
+import com.hainkiwanki.minecraftcourse.item.custom.LevitationSwordItem;
 import com.hainkiwanki.minecraftcourse.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,7 +37,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).food(ModFoods.TURNIP)));
 
     public static final RegistryObject<Item> COBALT_SWORD = ITEMS.register("cobalt_sword",
-            () -> new SwordItem(ModTiers.COBALT, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+            () -> new LevitationSwordItem(ModTiers.COBALT, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_PICKAXE = ITEMS.register("cobalt_pickaxe",
             () -> new PickaxeItem(ModTiers.COBALT, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
