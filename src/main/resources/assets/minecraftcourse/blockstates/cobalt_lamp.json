@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": { "model": "minecraftcourse:block/cobalt_lamp_off" },
+    "clicked=true": { "model": "minecraftcourse:block/cobalt_lamp_on" }
+  }
+}

@@ -1,6 +1,7 @@
 package com.hainkiwanki.minecraftcourse.block;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
+import com.hainkiwanki.minecraftcourse.block.custom.CobaltLampBlock;
 import com.hainkiwanki.minecraftcourse.block.custom.SpeedyBlock;
 import com.hainkiwanki.minecraftcourse.item.ModCreativeModeTab;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
@@ -107,6 +108,14 @@ public class ModBlocks {
                     .of(Material.WOOD)
                     .strength(2f)
                     .requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> COBALT_LAMP = registerBlock("cobalt_lamp",
+            () -> new CobaltLampBlock(BlockBehaviour.Properties
+                    .of(Material.METAL)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0)),
+            ModCreativeModeTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
