@@ -1,6 +1,7 @@
 package com.hainkiwanki.minecraftcourse;
 
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
+import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -36,6 +37,7 @@ public class MinecraftCourseMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModEnchantments.register(eventBus);
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
         // Register ourselves for server and other game events we are interested in

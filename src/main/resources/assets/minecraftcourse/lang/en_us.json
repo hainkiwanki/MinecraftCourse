@@ -40,5 +40,7 @@
 
   "itemGroup.coursemodtab": "Course Tab",
 
-  "item.minecraftcourse.dowsing_rod.no_valuables": "No valuables found!"
+  "item.minecraftcourse.dowsing_rod.no_valuables": "No valuables found!",
+
+  "enchantment.minecraftcourse.lightning_striker": "Lightning Striker"
 }
