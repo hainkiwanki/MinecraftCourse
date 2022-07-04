@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "clicked=0": { "model": "minecraftcourse:block/leather_lamp_off" },
+    "clicked=1": { "model": "minecraftcourse:block/leather_lamp_on" },
+    "clicked=2": { "model": "minecraftcourse:block/leather_lamp_on_powered" }
+  }
+}

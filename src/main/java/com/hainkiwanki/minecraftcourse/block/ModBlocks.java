@@ -2,9 +2,11 @@ package com.hainkiwanki.minecraftcourse.block;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.block.custom.CobaltLampBlock;
+import com.hainkiwanki.minecraftcourse.block.custom.LeatherLampBlock;
 import com.hainkiwanki.minecraftcourse.block.custom.SpeedyBlock;
 import com.hainkiwanki.minecraftcourse.item.ModCreativeModeTab;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
+import io.netty.util.ResourceLeakHint;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.*;
@@ -116,6 +118,20 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0)),
             ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> LEATHER_LAMP = registerBlock("leather_lamp",
+            () -> new LeatherLampBlock(BlockBehaviour.Properties.of(Material.WOOL)
+                    .strength(1f)
+                    .lightLevel((state) -> {
+                        int v = state.getValue(LeatherLampBlock.CLICKED);
+                        if(v == 1) {
+                            return 7;
+                        } else if (v == 2) {
+                            return 15;
+                        } else {
+                            return 0;
+                        }
+                    })), ModCreativeModeTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
