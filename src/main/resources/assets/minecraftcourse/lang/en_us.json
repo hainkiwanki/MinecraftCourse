@@ -19,6 +19,7 @@
   "item.minecraftcourse.cobalt_horse_armor": "Cobalt Horse Armor",
 
   "item.minecraftcourse.data_tablet": "Data Tablet",
+  "item.minecraftcourse.monster_jar": "Monster Jar",
 
 
   "block.minecraftcourse.cobalt_block": "Cobalt Block",
@@ -45,6 +46,7 @@
   "itemGroup.coursemodtab": "Course Tab",
 
   "item.minecraftcourse.dowsing_rod.no_valuables": "No valuables found!",
+  "item.minecraftcourse.monster_jar.clicked": "You clicked a mob: ",
 
   "enchantment.minecraftcourse.lightning_striker": "Lightning Striker"
 }

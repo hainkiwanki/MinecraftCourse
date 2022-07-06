@@ -66,4 +66,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
             () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> MONSTER_JAR = ITEMS.register("monster_jar",
+            () -> new MonsterJarItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
+
 }
