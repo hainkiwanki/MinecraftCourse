@@ -20,6 +20,7 @@
 
   "item.minecraftcourse.data_tablet": "Data Tablet",
   "item.minecraftcourse.monster_jar": "Monster Jar",
+  "item.minecraftcourse.turnip_seeds": "Turnip Seeds",
 
 
   "block.minecraftcourse.cobalt_block": "Cobalt Block",
@@ -38,6 +39,7 @@
   "block.minecraftcourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
   "block.minecraftcourse.cobalt_lamp": "Cobalt Lamp",
   "block.minecraftcourse.leather_lamp": "Leather Lamp",
+  "block.minecraftcourse.turnip_crop": "Turnip Crop",
 
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",

@@ -4,6 +4,7 @@ import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.block.custom.CobaltLampBlock;
 import com.hainkiwanki.minecraftcourse.block.custom.LeatherLampBlock;
 import com.hainkiwanki.minecraftcourse.block.custom.SpeedyBlock;
+import com.hainkiwanki.minecraftcourse.block.custom.TurnipCropBlock;
 import com.hainkiwanki.minecraftcourse.item.ModCreativeModeTab;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import io.netty.util.ResourceLeakHint;
@@ -132,6 +133,10 @@ public class ModBlocks {
                             return 0;
                         }
                     })), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",
+            () -> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)
+                    .noCollission().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

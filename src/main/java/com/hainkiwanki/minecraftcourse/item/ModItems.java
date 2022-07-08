@@ -1,6 +1,7 @@
 package com.hainkiwanki.minecraftcourse.item;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
+import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -69,5 +70,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> MONSTER_JAR = ITEMS.register("monster_jar",
             () -> new MonsterJarItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
 }
