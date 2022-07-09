@@ -52,5 +52,7 @@
   "item.minecraftcourse.dowsing_rod.no_valuables": "No valuables found!",
   "item.minecraftcourse.monster_jar.clicked": "You clicked a mob: ",
 
-  "enchantment.minecraftcourse.lightning_striker": "Lightning Striker"
+  "enchantment.minecraftcourse.lightning_striker": "Lightning Striker",
+
+  "sounds.minecraftcourse.dowsing_rod_found_ore": "Bang"
 }

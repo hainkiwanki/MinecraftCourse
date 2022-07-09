@@ -3,6 +3,7 @@ package com.hainkiwanki.minecraftcourse;
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
+import com.hainkiwanki.minecraftcourse.sound.ModSounds;
 import com.hainkiwanki.minecraftcourse.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -41,6 +42,8 @@ public class MinecraftCourseMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModEnchantments.register(eventBus);
+        ModSounds.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
         // Register ourselves for server and other game events we are interested in

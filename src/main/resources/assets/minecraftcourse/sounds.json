@@ -1,0 +1,8 @@
+{
+  "dowsing_rod_found_ore": {
+    "subtitle": "sounds.minecraftcourse.dowsing_rod_found_ore",
+    "sounds": [
+      "minecraftcourse:dowsing_rod_found_ore"
+    ]
+  }
+}
