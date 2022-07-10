@@ -4,5 +4,35 @@
     "sounds": [
       "minecraftcourse:dowsing_rod_found_ore"
     ]
+  },
+  "cobalt_lamp_break": {
+    "subtitle": "minecraftcourse.cobalt_lamp_break",
+    "sounds": [
+      "minecraftcourse:cobalt_lamp_break"
+    ]
+  },
+  "cobalt_lamp_step": {
+    "subtitle": "minecraftcourse.cobalt_lamp_step",
+    "sounds": [
+      "minecraftcourse:cobalt_lamp_step"
+    ]
+  },
+  "cobalt_lamp_place": {
+    "subtitle": "minecraftcourse.cobalt_lamp_place",
+    "sounds": [
+      "minecraftcourse:cobalt_lamp_place"
+    ]
+  },
+  "cobalt_lamp_hit": {
+    "subtitle": "minecraftcourse.cobalt_lamp_hit",
+    "sounds": [
+      "minecraftcourse:cobalt_lamp_hit"
+    ]
+  },
+  "cobalt_lamp_fall": {
+    "subtitle": "minecraftcourse.cobalt_lamp_fall",
+    "sounds": [
+      "minecraftcourse:cobalt_lamp_fall"
+    ]
   }
 }

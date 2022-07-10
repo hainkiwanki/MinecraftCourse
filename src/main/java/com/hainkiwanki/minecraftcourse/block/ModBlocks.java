@@ -7,6 +7,7 @@ import com.hainkiwanki.minecraftcourse.block.custom.SpeedyBlock;
 import com.hainkiwanki.minecraftcourse.block.custom.TurnipCropBlock;
 import com.hainkiwanki.minecraftcourse.item.ModCreativeModeTab;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
+import com.hainkiwanki.minecraftcourse.sound.ModSounds;
 import io.netty.util.ResourceLeakHint;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -118,6 +119,7 @@ public class ModBlocks {
                     .of(Material.METAL)
                     .strength(2f)
                     .requiresCorrectToolForDrops()
+                    .sound(ModSounds.COBALT_LAMP_SOUNDS)
                     .lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0)),
             ModCreativeModeTab.COURSE_TAB);
 
