@@ -1,6 +1,5 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "minecraft:blast_furnace",
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "minecraftcourse:machines/cobalt_blaster",
