@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraftcourse:cobalt_ingot"
+    },
+    "title": "MinecraftCourse Mod",
+    "description": "The Power lies in the Cobalt!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "minecraftcourse:textures/block/cobalt_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraftcourse:cobalt_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
