@@ -42,6 +42,7 @@
   "block.minecraftcourse.turnip_crop": "Turnip Crop",
   "block.minecraftcourse.pink_rose": "Pink Rose",
   "block.minecraftcourse.potted_pink_rose": "Potted Pink Rose",
+  "block.minecraftcourse.cobalt_blaster": "Cobalt Blaster",
 
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",
@@ -54,5 +55,7 @@
 
   "enchantment.minecraftcourse.lightning_striker": "Lightning Striker",
 
-  "sounds.minecraftcourse.dowsing_rod_found_ore": "Bang"
+  "sounds.minecraftcourse.dowsing_rod_found_ore": "Bang",
+  "item.minecraftcourse.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.minecraftcourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)"
 }

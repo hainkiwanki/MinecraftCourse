@@ -22,6 +22,7 @@ public class ModSounds {
     public static RegistryObject<SoundEvent> COBALT_LAMP_PLACE = registerSoundEvents("cobalt_lamp_place");
     public static RegistryObject<SoundEvent> COBALT_LAMP_HIT = registerSoundEvents("cobalt_lamp_hit");
     public static RegistryObject<SoundEvent> COBALT_LAMP_FALL = registerSoundEvents("cobalt_lamp_fall");
+    public static RegistryObject<SoundEvent> BAR_BRAWL = registerSoundEvents("bar_brawl");
 
     public static final ForgeSoundType COBALT_LAMP_SOUNDS = new ForgeSoundType(1f, 1f, ModSounds.COBALT_LAMP_BREAK,
             ModSounds.COBALT_LAMP_STEP, ModSounds.COBALT_LAMP_PLACE, ModSounds.COBALT_LAMP_HIT, ModSounds.COBALT_LAMP_FALL);

@@ -1,10 +1,7 @@
 package com.hainkiwanki.minecraftcourse.block;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
-import com.hainkiwanki.minecraftcourse.block.custom.CobaltLampBlock;
-import com.hainkiwanki.minecraftcourse.block.custom.LeatherLampBlock;
-import com.hainkiwanki.minecraftcourse.block.custom.SpeedyBlock;
-import com.hainkiwanki.minecraftcourse.block.custom.TurnipCropBlock;
+import com.hainkiwanki.minecraftcourse.block.custom.*;
 import com.hainkiwanki.minecraftcourse.item.ModCreativeModeTab;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
@@ -147,6 +144,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose",
             () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
+    public static final RegistryObject<Block> COBALT_BLASTER = registerBlock("cobalt_blaster",
+            () -> new CobaltBlasterBlock(BlockBehaviour.Properties.of(Material.METAL)), ModCreativeModeTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
