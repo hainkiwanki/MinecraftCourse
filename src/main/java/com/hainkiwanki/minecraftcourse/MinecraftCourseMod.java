@@ -2,6 +2,7 @@ package com.hainkiwanki.minecraftcourse;
 
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
+import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.painting.ModPaintings;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
@@ -45,6 +46,7 @@ public class MinecraftCourseMod
         ModEnchantments.register(eventBus);
         ModSounds.register(eventBus);
         ModPaintings.register(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -59,6 +61,10 @@ public class MinecraftCourseMod
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_BLASTER.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_BLOCK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLUID.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.cutout());
 
         ModItemProperties.addCustomItemPorperties();
     }

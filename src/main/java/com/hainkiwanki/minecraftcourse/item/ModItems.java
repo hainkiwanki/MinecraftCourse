@@ -2,6 +2,7 @@ package com.hainkiwanki.minecraftcourse.item;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
+import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.custom.*;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -80,6 +81,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
     public static final RegistryObject<Item> COBALT_BOW = ITEMS.register("cobalt_bow",
             () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).durability(500)));
-
+    public static final RegistryObject<Item> HONEY_BUCKET = ITEMS.register("honey_bucket",
+            () -> new BucketItem(ModFluids.HONEY_FLUID, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
 }

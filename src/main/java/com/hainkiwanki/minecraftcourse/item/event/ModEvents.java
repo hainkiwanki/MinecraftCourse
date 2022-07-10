@@ -1,4 +1,4 @@
-package com.hainkiwanki.minecraftcourse.event;
+package com.hainkiwanki.minecraftcourse.item.event;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.command.ReturnHomeCommand;
