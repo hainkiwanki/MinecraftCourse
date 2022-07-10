@@ -28,7 +28,7 @@ public class ModSounds {
             ModSounds.COBALT_LAMP_STEP, ModSounds.COBALT_LAMP_PLACE, ModSounds.COBALT_LAMP_HIT, ModSounds.COBALT_LAMP_FALL);
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
-        ResourceLocation id = new ResourceLocation(MinecraftCourseMod.MOD_ID);
+        ResourceLocation id = new ResourceLocation(MinecraftCourseMod.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> new SoundEvent(id));
     }
 }
