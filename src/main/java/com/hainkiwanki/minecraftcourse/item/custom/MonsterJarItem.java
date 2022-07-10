@@ -1,5 +1,8 @@
 package com.hainkiwanki.minecraftcourse.item.custom;
 
+import com.hainkiwanki.minecraftcourse.item.ModItems;
+import com.hainkiwanki.minecraftcourse.util.InventoryUtil;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -22,23 +25,20 @@ public class MonsterJarItem extends Item {
     @Override
     public InteractionResult interactLivingEntity(ItemStack pStack, Player pPlayer, LivingEntity pInteractionTarget, InteractionHand pUsedHand) {
         if (!pPlayer.level.isClientSide() && pUsedHand == InteractionHand.MAIN_HAND) {
-            if (pInteractionTarget instanceof LivingEntity) {
-                LivingEntity target = (LivingEntity) pInteractionTarget;
-                pPlayer.sendMessage(new TextComponent("item.minecraftcourse.monster_jar.clicked " + target.getClass().getName()), pPlayer.getUUID());
-                CompoundTag nbtData = new CompoundTag();
-                nbtData.putString("minecraftcourse.clicked_mob", target.getClass().getSimpleName());
-                pPlayer.getItemInHand(InteractionHand.MAIN_HAND).setTag(nbtData);
-                return InteractionResult.SUCCESS;
-            }
+            pPlayer.sendMessage(new TextComponent(pInteractionTarget.getType().getRegistryName().toString()), pPlayer.getUUID());
+            CompoundTag nbtData = new CompoundTag();
+            nbtData.putString("minecraftcourse_clicked_mob", pInteractionTarget.getType().getRegistryName().toString());
+            pPlayer.getItemInHand(InteractionHand.MAIN_HAND).setTag(nbtData);
         }
 
-        return InteractionResult.FAIL;
+        return InteractionResult.SUCCESS;
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        if(pPlayer.getItemInHand(pUsedHand).hasTag()) {
+        if(pPlayer.getItemInHand(pUsedHand).hasTag() && Screen.hasShiftDown()) {
             pPlayer.getItemInHand(pUsedHand).setTag(new CompoundTag());
+            pPlayer.sendMessage(new TextComponent("removed"), pPlayer.getUUID());
         }
 
         return super.use(pLevel, pPlayer, pUsedHand);
@@ -47,7 +47,7 @@ public class MonsterJarItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if(pStack.hasTag()) {
-            String clickedMob = pStack.getTag().getString("minecraftcourse.clicked_mob");
+            String clickedMob = pStack.getTag().getString("minecraftcourse_clicked_mob");
             pTooltipComponents.add(new TextComponent(clickedMob));
         }
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);

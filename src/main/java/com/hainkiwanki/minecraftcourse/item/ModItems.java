@@ -76,5 +76,8 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(), new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
     public static final RegistryObject<Item> BAR_BRAWL_RECORD = ITEMS.register("bar_brawl_music_disc",
             () -> new RecordItem(4, ModSounds.BAR_BRAWL, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> COBALT_STAFF = ITEMS.register("cobalt_staff",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
+
 
 }
