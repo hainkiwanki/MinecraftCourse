@@ -1,12 +1,16 @@
 package com.hainkiwanki.minecraftcourse;
 
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
+import com.hainkiwanki.minecraftcourse.block.entity.ModBlockEntities;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.painting.ModPaintings;
+import com.hainkiwanki.minecraftcourse.screen.CobaltBlasterScreen;
+import com.hainkiwanki.minecraftcourse.screen.ModMenuTypes;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
 import com.hainkiwanki.minecraftcourse.util.ModItemProperties;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
@@ -47,6 +51,8 @@ public class MinecraftCourseMod
         ModSounds.register(eventBus);
         ModPaintings.register(eventBus);
         ModFluids.register(eventBus);
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -67,6 +73,7 @@ public class MinecraftCourseMod
         ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.cutout());
 
         ModItemProperties.addCustomItemPorperties();
+        MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)
