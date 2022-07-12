@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "minecraftcourse:block/stripped_cherry_blossom_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "minecraftcourse:block/stripped_cherry_blossom_wood"
+    },
+    "axis=z": {
+      "model": "minecraftcourse:block/stripped_cherry_blossom_wood",
+      "x": 90
+    }
+  }
+}

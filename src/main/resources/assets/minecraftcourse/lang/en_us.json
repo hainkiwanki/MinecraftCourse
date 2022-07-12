@@ -48,6 +48,13 @@
   "block.minecraftcourse.potted_pink_rose": "Potted Pink Rose",
   "block.minecraftcourse.cobalt_blaster": "Cobalt Blaster",
 
+
+  "block.minecraftcourse.cherry_blossom_log": "Cherry Blossom Log",
+  "block.minecraftcourse.cherry_blossom_planks": "Cherry Blossom Planks",
+  "block.minecraftcourse.cherry_blossom_wood": "Cherry Blossom Wood",
+  "block.minecraftcourse.stripped_cherry_blossom_log": "Stripped Cherry Blossom Log",
+  "block.minecraftcourse.stripped_cherry_blossom_wood": "Stripped Cherry Blossom Wood",
+
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",
   "tooltip.block.speedy_block" : "It speeds you up",

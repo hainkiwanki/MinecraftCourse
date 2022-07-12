@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraftcourse:cherry_blossom_log",
+    "minecraftcourse:cherry_blossom_wood",
+    "minecraftcourse:stripped_cherry_blossom_log",
+    "minecraftcourse:stripped_cherry_blossom_wood"
+
+  ]
+}
