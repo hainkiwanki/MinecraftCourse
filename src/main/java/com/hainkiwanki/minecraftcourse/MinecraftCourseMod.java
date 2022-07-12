@@ -6,6 +6,7 @@ import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.painting.ModPaintings;
+import com.hainkiwanki.minecraftcourse.recipe.ModRecipes;
 import com.hainkiwanki.minecraftcourse.screen.CobaltBlasterScreen;
 import com.hainkiwanki.minecraftcourse.screen.ModMenuTypes;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
@@ -53,6 +54,7 @@ public class MinecraftCourseMod
         ModFluids.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+        ModRecipes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
