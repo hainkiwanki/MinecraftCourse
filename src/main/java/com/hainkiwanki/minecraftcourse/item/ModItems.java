@@ -84,4 +84,9 @@ public class ModItems {
     public static final RegistryObject<Item> HONEY_BUCKET = ITEMS.register("honey_bucket",
             () -> new BucketItem(ModFluids.HONEY_FLUID, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
+
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_SIGN_ITEM = ITEMS.register("cherry_blossom_sign",
+            () -> new SignItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(16),
+                    ModBlocks.CHERRY_BLOSSOM_SIGN.get(), ModBlocks.CHERRY_BLOSSOM_WALL_SIGN.get()));
+
 }
