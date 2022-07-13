@@ -54,6 +54,9 @@
   "block.minecraftcourse.stripped_cherry_blossom_log": "Stripped Cherry Blossom Log",
   "block.minecraftcourse.stripped_cherry_blossom_wood": "Stripped Cherry Blossom Wood",
   "block.minecraftcourse.cherry_blossom_sign": "Cherry Blossom Sign",
+  "block.minecraftcourse.cherry_blossom_leaves": "Cherry Blossom Leaves",
+  "block.minecraftcourse.cherry_blossom_sapling": "Cherry Blossom Sapling",
+
 
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",
