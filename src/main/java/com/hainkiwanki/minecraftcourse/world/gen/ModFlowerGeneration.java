@@ -1,6 +1,7 @@
 package com.hainkiwanki.minecraftcourse.world.gen;
 
 import com.hainkiwanki.minecraftcourse.world.feature.ModPlacedFeatures;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -19,10 +20,10 @@ public class ModFlowerGeneration {
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
         if(types.contains(BiomeDictionary.Type.PLAINS)) {
-            List<Supplier<PlacedFeature>> base =
+            List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> ModPlacedFeatures.PINK_ROSE_PLACED);
+            base.add(ModPlacedFeatures.PINK_ROSE_PLACED);
         }
     }
 }

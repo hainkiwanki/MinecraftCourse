@@ -7,6 +7,8 @@ import com.hainkiwanki.minecraftcourse.config.MinecraftCourseClientConfigs;
 import com.hainkiwanki.minecraftcourse.config.MinecraftCourseCommonConfigs;
 import com.hainkiwanki.minecraftcourse.effect.ModEffects;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
+import com.hainkiwanki.minecraftcourse.entity.ModEntityTypes;
+import com.hainkiwanki.minecraftcourse.entity.client.RaccoonRenderer;
 import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.painting.ModPaintings;
@@ -23,6 +25,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -39,6 +43,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MinecraftCourseMod.MOD_ID)
@@ -62,6 +67,9 @@ public class MinecraftCourseMod
         ModRecipes.register(eventBus);
         ModEffects.register(eventBus);
         ModPotions.register(eventBus);
+        ModEntityTypes.register(eventBus);
+
+        GeckoLib.initialize();
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -93,6 +101,8 @@ public class MinecraftCourseMod
         ModItemProperties.addCustomItemPorperties();
         MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
         WoodType.register(ModWoodTypes.CHERRY_BLOSSOM);
+
+        EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)
