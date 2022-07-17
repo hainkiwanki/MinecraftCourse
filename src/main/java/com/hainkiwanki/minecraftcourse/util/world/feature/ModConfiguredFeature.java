@@ -1,4 +1,4 @@
-package com.hainkiwanki.minecraftcourse.world.feature;
+package com.hainkiwanki.minecraftcourse.util.world.feature;
 
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import net.minecraft.data.worldgen.features.FeatureUtils;

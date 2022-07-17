@@ -1,8 +1,5 @@
-package com.hainkiwanki.minecraftcourse.world.feature;
+package com.hainkiwanki.minecraftcourse.util.world.feature;
 
-import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.data.worldgen.features.VegetationFeatures;
-import net.minecraft.data.worldgen.placement.OrePlacements;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.level.levelgen.VerticalAnchor;

@@ -5,7 +5,7 @@ import com.hainkiwanki.minecraftcourse.block.custom.*;
 import com.hainkiwanki.minecraftcourse.item.ModCreativeModeTab;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
-import com.hainkiwanki.minecraftcourse.world.feature.tree.CherryBlossomTreeGrower;
+import com.hainkiwanki.minecraftcourse.util.world.feature.tree.CherryBlossomTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
