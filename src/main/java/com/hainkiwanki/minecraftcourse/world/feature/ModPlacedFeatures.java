@@ -1,9 +1,13 @@
 package com.hainkiwanki.minecraftcourse.world.feature;
 
+import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.features.VegetationFeatures;
+import net.minecraft.data.worldgen.placement.OrePlacements;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
+import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
@@ -14,4 +18,8 @@ public class ModPlacedFeatures {
 
     public static final PlacedFeature PINK_ROSE_PLACED = PlacementUtils.register("pink_rose_placed",
             ModConfiguredFeature.PINK_ROSE.placed(InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+    public static final PlacedFeature COBALT_ORE_PLACED = PlacementUtils.register("cobalt_ore_placed",
+            ModConfiguredFeature.ORE_COBALT.placed(ModOrePlacement.commonOrePlacement(7,
+                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(88)))));
 }

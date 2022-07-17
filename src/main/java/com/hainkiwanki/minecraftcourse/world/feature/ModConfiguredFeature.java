@@ -2,6 +2,7 @@ package com.hainkiwanki.minecraftcourse.world.feature;
 
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.random.SimpleWeightedRandomList;
@@ -12,10 +13,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -24,6 +22,9 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.List;
+
+import static net.minecraft.data.worldgen.features.OreFeatures.DEEPSLATE_ORE_REPLACEABLES;
+import static net.minecraft.data.worldgen.features.OreFeatures.STONE_ORE_REPLACEABLES;
 
 public class ModConfiguredFeature {
     public static final ConfiguredFeature<TreeConfiguration, ?> CHERRY_BLOSSOM_TREE =
@@ -45,4 +46,19 @@ public class ModConfiguredFeature {
             Feature.FLOWER.configured(new RandomPatchConfiguration(64, 6, 2, () -> {
                 return Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINK_ROSE.get()))).onlyWhenEmpty();
             })));
+
+    /*public static final List<OreConfiguration.TargetBlockState> OVERWORLD_COBALT_ORES = List.of(
+            OreConfiguration.target(STONE_ORE_REPLACEABLES, ModBlocks.COBALT_ORE.get().defaultBlockState()),
+            OreConfiguration.target(DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
+
+    public static final ConfiguredFeature<?, ?> COBALT_ORE = FeatureUtils.register("cobalt_ore",
+            Feature.ORE.configured(new OreConfiguration(OVERWORLD_COBALT_ORES, 9)));*/
+
+    public static final List<OreConfiguration.TargetBlockState> ORE_COBALT_TARGET_LIST =
+            List.of(OreConfiguration.target(STONE_ORE_REPLACEABLES, ModBlocks.COBALT_ORE.get().defaultBlockState()),
+                    OreConfiguration.target(DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
+
+    public static final ConfiguredFeature<?, ?> ORE_COBALT = FeatureUtils.register("ore_cobalt",
+            Feature.ORE.configured(new OreConfiguration(ORE_COBALT_TARGET_LIST, 20)));
+
 }
