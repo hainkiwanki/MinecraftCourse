@@ -10,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
@@ -38,10 +39,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     public static final RegistryObject<Block> COBALT_ORE = registerBlock("cobalt_ore",
-            () -> new Block(BlockBehaviour.Properties
+            () -> new OreBlock(BlockBehaviour.Properties
                     .of(Material.STONE)
                     .strength(4f)
-                    .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+                    .requiresCorrectToolForDrops(), UniformInt.of(2, 4)), ModCreativeModeTab.COURSE_TAB);
 
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_block",
             () -> new Block(BlockBehaviour.Properties
