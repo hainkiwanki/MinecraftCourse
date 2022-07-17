@@ -3,6 +3,8 @@ package com.hainkiwanki.minecraftcourse;
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.block.ModWoodTypes;
 import com.hainkiwanki.minecraftcourse.block.entity.ModBlockEntities;
+import com.hainkiwanki.minecraftcourse.config.MinecraftCourseClientConfigs;
+import com.hainkiwanki.minecraftcourse.config.MinecraftCourseCommonConfigs;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
@@ -24,7 +26,9 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -54,6 +58,11 @@ public class MinecraftCourseMod
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
+
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MinecraftCourseClientConfigs.SPEC, "minecraftcourse-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MinecraftCourseCommonConfigs.SPEC, "minecraftcourse-common.toml");
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }

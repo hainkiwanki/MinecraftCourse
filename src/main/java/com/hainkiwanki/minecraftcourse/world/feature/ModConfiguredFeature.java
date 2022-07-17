@@ -1,6 +1,7 @@
-package com.hainkiwanki.minecraftcourse.util.world.feature;
+package com.hainkiwanki.minecraftcourse.world.feature;
 
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
+import com.hainkiwanki.minecraftcourse.config.MinecraftCourseCommonConfigs;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.features.TreeFeatures;
@@ -47,18 +48,11 @@ public class ModConfiguredFeature {
                 return Feature.SIMPLE_BLOCK.configured(new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINK_ROSE.get()))).onlyWhenEmpty();
             })));
 
-    /*public static final List<OreConfiguration.TargetBlockState> OVERWORLD_COBALT_ORES = List.of(
-            OreConfiguration.target(STONE_ORE_REPLACEABLES, ModBlocks.COBALT_ORE.get().defaultBlockState()),
-            OreConfiguration.target(DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
-
-    public static final ConfiguredFeature<?, ?> COBALT_ORE = FeatureUtils.register("cobalt_ore",
-            Feature.ORE.configured(new OreConfiguration(OVERWORLD_COBALT_ORES, 9)));*/
-
     public static final List<OreConfiguration.TargetBlockState> ORE_COBALT_TARGET_LIST =
             List.of(OreConfiguration.target(STONE_ORE_REPLACEABLES, ModBlocks.COBALT_ORE.get().defaultBlockState()),
                     OreConfiguration.target(DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
 
     public static final ConfiguredFeature<?, ?> ORE_COBALT = FeatureUtils.register("ore_cobalt",
-            Feature.ORE.configured(new OreConfiguration(ORE_COBALT_TARGET_LIST, 20)));
+            Feature.ORE.configured(new OreConfiguration(ORE_COBALT_TARGET_LIST, MinecraftCourseCommonConfigs.COBALT_ORE_VEIN_SIZE.get())));
 
 }

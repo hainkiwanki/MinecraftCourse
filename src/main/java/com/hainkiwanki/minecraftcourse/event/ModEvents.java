@@ -3,6 +3,7 @@ package com.hainkiwanki.minecraftcourse.event;
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.command.ReturnHomeCommand;
 import com.hainkiwanki.minecraftcourse.command.SetHomeCommand;
+import com.hainkiwanki.minecraftcourse.config.MinecraftCourseClientConfigs;
 import com.hainkiwanki.minecraftcourse.util.ModTitleScreen;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.world.entity.player.Player;
@@ -48,11 +49,11 @@ public class ModEvents {
         }
     }
 
-
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public static void openGui(ScreenOpenEvent event) {
-        if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof ModTitleScreen)) {
+        if (MinecraftCourseClientConfigs.CUSTOM_TITLE_SCREEN.get() &&
+                event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof ModTitleScreen)) {
             event.setScreen(new ModTitleScreen());
         }
     }

@@ -1,6 +1,6 @@
-package com.hainkiwanki.minecraftcourse.util.world.gen;
+package com.hainkiwanki.minecraftcourse.world.gen;
 
-import com.hainkiwanki.minecraftcourse.util.world.feature.ModPlacedFeatures;
+import com.hainkiwanki.minecraftcourse.world.feature.ModPlacedFeatures;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;

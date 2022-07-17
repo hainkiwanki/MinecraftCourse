@@ -1,9 +1,9 @@
-package com.hainkiwanki.minecraftcourse.util.world;
+package com.hainkiwanki.minecraftcourse.world;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
-import com.hainkiwanki.minecraftcourse.util.world.gen.ModTreeGeneration;
-import com.hainkiwanki.minecraftcourse.util.world.gen.ModFlowerGeneration;
-import com.hainkiwanki.minecraftcourse.util.world.gen.ModOreGeneration;
+import com.hainkiwanki.minecraftcourse.world.gen.ModTreeGeneration;
+import com.hainkiwanki.minecraftcourse.world.gen.ModFlowerGeneration;
+import com.hainkiwanki.minecraftcourse.world.gen.ModOreGeneration;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
