@@ -1,4 +1,4 @@
-package com.hainkiwanki.minecraftcourse.entity.client;
+package com.hainkiwanki.minecraftcourse.entity.custom;
 
 import com.google.common.collect.ImmutableMap;
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
