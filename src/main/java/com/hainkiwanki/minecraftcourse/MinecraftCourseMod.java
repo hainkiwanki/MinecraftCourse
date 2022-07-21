@@ -9,6 +9,7 @@ import com.hainkiwanki.minecraftcourse.effect.ModEffects;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.entity.ModEntityTypes;
 import com.hainkiwanki.minecraftcourse.entity.client.RaccoonRenderer;
+import com.hainkiwanki.minecraftcourse.entity.client.TigerRenderer;
 import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.painting.ModPaintings;
@@ -103,6 +104,7 @@ public class MinecraftCourseMod
         WoodType.register(ModWoodTypes.CHERRY_BLOSSOM);
 
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
+        EntityRenderers.register(ModEntityTypes.TIGER.get(), TigerRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)

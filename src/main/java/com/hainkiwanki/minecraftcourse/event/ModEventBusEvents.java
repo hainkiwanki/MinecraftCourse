@@ -3,6 +3,7 @@ package com.hainkiwanki.minecraftcourse.event;
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.entity.ModEntityTypes;
 import com.hainkiwanki.minecraftcourse.entity.custom.RaccoonEntity;
+import com.hainkiwanki.minecraftcourse.entity.custom.TigerEntity;
 import com.hainkiwanki.minecraftcourse.event.loot.DowsingRodInIglooAdditionModifier;
 import com.hainkiwanki.minecraftcourse.event.loot.TurnipSeedsFromGrassAdditionModifier;
 import com.hainkiwanki.minecraftcourse.recipe.CobaltBlasterRecipe;
@@ -33,6 +34,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.RACCOON.get(), RaccoonEntity.setAttributes());
+        event.put(ModEntityTypes.TIGER.get(), TigerEntity.setAttributes());
     }
 
     @SubscribeEvent
