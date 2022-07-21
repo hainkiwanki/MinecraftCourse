@@ -8,6 +8,7 @@ import com.hainkiwanki.minecraftcourse.config.MinecraftCourseCommonConfigs;
 import com.hainkiwanki.minecraftcourse.effect.ModEffects;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.entity.ModEntityTypes;
+import com.hainkiwanki.minecraftcourse.entity.client.ModBoatRenderer;
 import com.hainkiwanki.minecraftcourse.entity.client.RaccoonRenderer;
 import com.hainkiwanki.minecraftcourse.entity.client.TigerRenderer;
 import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
@@ -105,6 +106,7 @@ public class MinecraftCourseMod
 
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
         EntityRenderers.register(ModEntityTypes.TIGER.get(), TigerRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BOAT_ENTITY.get(), ModBoatRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)

@@ -3,6 +3,7 @@ package com.hainkiwanki.minecraftcourse.item;
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.entity.ModEntityTypes;
+import com.hainkiwanki.minecraftcourse.entity.custom.ModBoatEntity;
 import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.custom.*;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
@@ -100,4 +101,7 @@ public class ModItems {
     public static final RegistryObject<ForgeSpawnEggItem> TIGER_SPAWN_EGG = ITEMS.register("tiger_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.TIGER,0xfcb603, 0x242321,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_BOAT = ITEMS.register("cherry_blossom_boat",
+            () -> new ModBoatItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB), ModBoatEntity.Type.CHERRY_BLOSSOM));
 }
