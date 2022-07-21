@@ -1,9 +1,14 @@
 package com.hainkiwanki.minecraftcourse.entity.client;
 
+import com.google.common.collect.Maps;
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
 import com.hainkiwanki.minecraftcourse.entity.custom.RaccoonEntity;
+import com.hainkiwanki.minecraftcourse.entity.variant.RaccoonVariant;
+import net.minecraft.Util;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
+
+import java.util.Map;
 
 public class RaccoonModel extends AnimatedGeoModel<RaccoonEntity> {
     @Override
@@ -13,7 +18,7 @@ public class RaccoonModel extends AnimatedGeoModel<RaccoonEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(RaccoonEntity object) {
-        return new ResourceLocation(MinecraftCourseMod.MOD_ID, "textures/entity/raccoon/raccoon.png");
+        return RaccoonRenderer.LOCATION_BY_VARIANT.get(object.getVariant());
     }
 
     @Override
