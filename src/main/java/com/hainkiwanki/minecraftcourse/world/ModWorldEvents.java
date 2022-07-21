@@ -1,6 +1,7 @@
 package com.hainkiwanki.minecraftcourse.world;
 
 import com.hainkiwanki.minecraftcourse.MinecraftCourseMod;
+import com.hainkiwanki.minecraftcourse.world.gen.ModEntityGeneration;
 import com.hainkiwanki.minecraftcourse.world.gen.ModTreeGeneration;
 import com.hainkiwanki.minecraftcourse.world.gen.ModFlowerGeneration;
 import com.hainkiwanki.minecraftcourse.world.gen.ModOreGeneration;
@@ -15,5 +16,6 @@ public class ModWorldEvents {
         ModOreGeneration.generateOres(event);
         ModTreeGeneration.generateTrees(event);
         ModFlowerGeneration.generateFlowers(event);
+        ModEntityGeneration.onEntitySpawn(event);
     }
 }
