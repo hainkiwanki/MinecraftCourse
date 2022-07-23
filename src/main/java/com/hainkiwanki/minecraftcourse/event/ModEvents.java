@@ -6,6 +6,7 @@ import com.hainkiwanki.minecraftcourse.command.SetHomeCommand;
 import com.hainkiwanki.minecraftcourse.config.MinecraftCourseClientConfigs;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.util.ModTitleScreen;
+import com.hainkiwanki.minecraftcourse.villager.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -87,6 +88,30 @@ public class ModEvents {
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 12),
                     stack,4,5,0.09F));
+        }
+
+        if(event.getType() == ModVillagers.BLASTMASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            ItemStack stack = new ItemStack(ModItems.COBALT_PAXEL.get(), 1);
+            int villagerLevel = 1;
+
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 12),
+                    stack,4,5,0.09F));
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 27),
+                    stack,4,5,0.09F));
+            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 35),
+                    stack,4,5,0.09F));
+
+            trades.get(2).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    stack,4,5,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 6),
+                    stack,4,5,0.09F));
+
         }
     }
 }

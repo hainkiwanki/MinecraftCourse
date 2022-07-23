@@ -21,6 +21,7 @@ import com.hainkiwanki.minecraftcourse.screen.ModMenuTypes;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
 import com.hainkiwanki.minecraftcourse.util.BetterBrewingRecipe;
 import com.hainkiwanki.minecraftcourse.util.ModItemProperties;
+import com.hainkiwanki.minecraftcourse.villager.ModVillagers;
 import com.hainkiwanki.minecraftcourse.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -71,6 +72,7 @@ public class MinecraftCourseMod
         ModPotions.register(eventBus);
         ModEntityTypes.register(eventBus);
         ModStructures.register(eventBus);
+        ModVillagers.register(eventBus);
 
         GeckoLib.initialize();
 
@@ -119,7 +121,7 @@ public class MinecraftCourseMod
 
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE);
-
+            ModVillagers.registerPOIs();
             BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
             Sheets.addWoodType(ModWoodTypes.CHERRY_BLOSSOM);
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.COBALT_INGOT.get(), ModPotions.FREEZE_POTION.get()));
