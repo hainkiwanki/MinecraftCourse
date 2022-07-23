@@ -59,13 +59,13 @@ public class ModItems {
             () -> new PaxelItem(ModTiers.COBALT, 0, 0f, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_HELMET = ITEMS.register("cobalt_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+            () -> new CobaltArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
     public static final RegistryObject<Item> COBALT_CHESTPLATE = ITEMS.register("cobalt_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+            () -> new CobaltArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
     public static final RegistryObject<Item> COBALT_LEGGINGS = ITEMS.register("cobalt_leggings",
-            () -> new ArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+            () -> new CobaltArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
     public static final RegistryObject<Item> COBALT_BOOTS = ITEMS.register("cobalt_boots",
-            () -> new ArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+            () -> new CobaltArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_HORSE_ARMOR = ITEMS.register("cobalt_horse_armor",
             () -> new HorseArmorItem(12, "cobalt", new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
