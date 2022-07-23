@@ -21,6 +21,7 @@ import com.hainkiwanki.minecraftcourse.screen.ModMenuTypes;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
 import com.hainkiwanki.minecraftcourse.util.BetterBrewingRecipe;
 import com.hainkiwanki.minecraftcourse.util.ModItemProperties;
+import com.hainkiwanki.minecraftcourse.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -69,6 +70,7 @@ public class MinecraftCourseMod
         ModEffects.register(eventBus);
         ModPotions.register(eventBus);
         ModEntityTypes.register(eventBus);
+        ModStructures.register(eventBus);
 
         GeckoLib.initialize();
 
