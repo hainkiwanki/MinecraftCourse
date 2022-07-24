@@ -15,5 +15,6 @@ public class ModOreGeneration {
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
 
         base.add(ModPlacedFeatures.COBALT_ORE_PLACED);
+        base.add(ModPlacedFeatures.COBALT_GEODE_PLACED);
     }
 }
