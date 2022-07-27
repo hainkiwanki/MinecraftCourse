@@ -77,39 +77,12 @@ public class MinecraftCourseMod
         GeckoLib.initialize();
 
         eventBus.addListener(this::setup);
-        eventBus.addListener(this::clientSetup);
-
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MinecraftCourseClientConfigs.SPEC, "minecraftcourse-client.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MinecraftCourseCommonConfigs.SPEC, "minecraftcourse-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TURNIP_CROP.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_ROSE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_BLASTER.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_SAPLING.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_WINDOW.get(), RenderType.translucent());
-
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_BLOCK.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLUID.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.translucent());
-
-        ModItemProperties.addCustomItemPorperties();
-        MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
-        WoodType.register(ModWoodTypes.CHERRY_BLOSSOM);
-
-        EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
-        EntityRenderers.register(ModEntityTypes.TIGER.get(), TigerRenderer::new);
-        EntityRenderers.register(ModEntityTypes.BOAT_ENTITY.get(), ModBoatRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)
