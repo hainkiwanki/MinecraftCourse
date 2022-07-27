@@ -61,6 +61,7 @@
   "block.minecraftcourse.cherry_blossom_leaves": "Cherry Blossom Leaves",
   "block.minecraftcourse.cherry_blossom_sapling": "Cherry Blossom Sapling",
   "block.minecraftcourse.winter_window": "Winter Window",
+  "block.minecraftcourse.pedestal": "Pedestal",
 
   "tooltip.minecraftcourse.dowsing_rod.tooltip.shift" : "Right click to find valuables",
   "tooltip.minecraftcourse.dowsing_rod.tooltip" : "Hold §eShift§r for more information",
