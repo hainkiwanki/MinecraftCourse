@@ -1,30 +1,23 @@
 package com.hainkiwanki.minecraftcourse.world.feature;
 
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
-import com.hainkiwanki.minecraftcourse.config.MinecraftCourseCommonConfigs;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.data.worldgen.features.OreFeatures;
-import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.GeodeBlockSettings;
 import net.minecraft.world.level.levelgen.GeodeCrackSettings;
 import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
@@ -60,7 +53,7 @@ public class ModConfiguredFeature {
                     OreConfiguration.target(DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_COBALT = FeatureUtils.register("ore_cobalt",
-            Feature.ORE, new OreConfiguration(ORE_COBALT_TARGET_LIST, MinecraftCourseCommonConfigs.COBALT_ORE_VEIN_SIZE.get()));
+            Feature.ORE, new OreConfiguration(ORE_COBALT_TARGET_LIST, 9));
 
     public static final Holder<ConfiguredFeature<GeodeConfiguration, ?>> COBALT_GEODE =
             FeatureUtils.register("cobalt_geode", Feature.GEODE ,

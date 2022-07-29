@@ -3,45 +3,30 @@ package com.hainkiwanki.minecraftcourse;
 import com.hainkiwanki.minecraftcourse.block.ModBlocks;
 import com.hainkiwanki.minecraftcourse.block.ModWoodTypes;
 import com.hainkiwanki.minecraftcourse.block.entity.ModBlockEntities;
-import com.hainkiwanki.minecraftcourse.config.MinecraftCourseClientConfigs;
-import com.hainkiwanki.minecraftcourse.config.MinecraftCourseCommonConfigs;
 import com.hainkiwanki.minecraftcourse.effect.ModEffects;
 import com.hainkiwanki.minecraftcourse.enchantment.ModEnchantments;
 import com.hainkiwanki.minecraftcourse.entity.ModEntityTypes;
-import com.hainkiwanki.minecraftcourse.entity.custom.ModBoatRenderer;
-import com.hainkiwanki.minecraftcourse.entity.client.RaccoonRenderer;
-import com.hainkiwanki.minecraftcourse.entity.client.TigerRenderer;
-import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.item.ModItems;
 import com.hainkiwanki.minecraftcourse.painting.ModPaintings;
 import com.hainkiwanki.minecraftcourse.potion.ModPotions;
 import com.hainkiwanki.minecraftcourse.recipe.ModRecipes;
-import com.hainkiwanki.minecraftcourse.screen.CobaltBlasterScreen;
 import com.hainkiwanki.minecraftcourse.screen.ModMenuTypes;
 import com.hainkiwanki.minecraftcourse.sound.ModSounds;
 import com.hainkiwanki.minecraftcourse.util.BetterBrewingRecipe;
-import com.hainkiwanki.minecraftcourse.util.ModItemProperties;
 import com.hainkiwanki.minecraftcourse.villager.ModVillagers;
+import com.hainkiwanki.minecraftcourse.world.feature.ModPlacedFeatures;
 import com.hainkiwanki.minecraftcourse.world.structure.ModStructures;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -59,12 +44,12 @@ public class MinecraftCourseMod
     public MinecraftCourseMod() {
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModEnchantments.register(eventBus);
         ModSounds.register(eventBus);
         ModPaintings.register(eventBus);
-        ModFluids.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
         ModRecipes.register(eventBus);
@@ -73,13 +58,10 @@ public class MinecraftCourseMod
         ModEntityTypes.register(eventBus);
         ModStructures.register(eventBus);
         ModVillagers.register(eventBus);
-
+        ModPlacedFeatures.register(eventBus);
         GeckoLib.initialize();
 
         eventBus.addListener(this::setup);
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MinecraftCourseClientConfigs.SPEC, "minecraftcourse-client.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MinecraftCourseCommonConfigs.SPEC, "minecraftcourse-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

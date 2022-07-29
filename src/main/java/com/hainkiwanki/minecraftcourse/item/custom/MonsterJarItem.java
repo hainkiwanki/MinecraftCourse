@@ -3,7 +3,6 @@ package com.hainkiwanki.minecraftcourse.item.custom;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -23,9 +22,8 @@ public class MonsterJarItem extends Item {
     @Override
     public InteractionResult interactLivingEntity(ItemStack pStack, Player pPlayer, LivingEntity pInteractionTarget, InteractionHand pUsedHand) {
         if (!pPlayer.level.isClientSide() && pUsedHand == InteractionHand.MAIN_HAND) {
-            pPlayer.sendMessage(new TextComponent(pInteractionTarget.getType().getRegistryName().toString()), pPlayer.getUUID());
             CompoundTag nbtData = new CompoundTag();
-            nbtData.putString("minecraftcourse_clicked_mob", pInteractionTarget.getType().getRegistryName().toString());
+            nbtData.putString("minecraftcourse_clicked_mob", pInteractionTarget.getClass().getSimpleName());
             pPlayer.getItemInHand(InteractionHand.MAIN_HAND).setTag(nbtData);
         }
 
@@ -36,7 +34,7 @@ public class MonsterJarItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         if(pPlayer.getItemInHand(pUsedHand).hasTag() && Screen.hasShiftDown()) {
             pPlayer.getItemInHand(pUsedHand).setTag(new CompoundTag());
-            pPlayer.sendMessage(new TextComponent("removed"), pPlayer.getUUID());
+            pPlayer.sendSystemMessage(Component.literal("removed"));
         }
 
         return super.use(pLevel, pPlayer, pUsedHand);
@@ -46,7 +44,7 @@ public class MonsterJarItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if(pStack.hasTag()) {
             String clickedMob = pStack.getTag().getString("minecraftcourse_clicked_mob");
-            pTooltipComponents.add(new TextComponent(clickedMob));
+            pTooltipComponents.add(Component.literal(clickedMob));
         }
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }

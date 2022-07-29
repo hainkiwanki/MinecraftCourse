@@ -9,7 +9,6 @@ import com.hainkiwanki.minecraftcourse.world.feature.tree.CherryBlossomTreeGrowe
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
@@ -39,7 +38,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     public static final RegistryObject<Block> COBALT_ORE = registerBlock("cobalt_ore",
-            () -> new OreBlock(BlockBehaviour.Properties
+            () -> new DropExperienceBlock(BlockBehaviour.Properties
                     .of(Material.STONE)
                     .strength(4f)
                     .requiresCorrectToolForDrops(), UniformInt.of(2, 4)), ModCreativeModeTab.COURSE_TAB);
@@ -229,7 +228,7 @@ public class ModBlocks {
                 new Item.Properties().tab(tab)){
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
-                pTooltip.add(new TranslatableComponent((tooltipKey)));
+                pTooltip.add(Component.translatable((tooltipKey)));
             }
         });
     }

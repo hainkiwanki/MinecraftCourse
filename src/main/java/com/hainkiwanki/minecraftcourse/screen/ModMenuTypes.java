@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
-            DeferredRegister.create(ForgeRegistries.CONTAINERS, MinecraftCourseMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.MENU_TYPES, MinecraftCourseMod.MOD_ID);
 
     public static final RegistryObject<MenuType<CobaltBlasterMenu>> COBALT_BLASTER_MENU =
             registerMenuType(CobaltBlasterMenu::new, "cobalt_blaster_menu");

@@ -27,13 +27,16 @@ public class CobaltBlasterRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer pContainer, net.minecraft.world.level.Level pLevel) {
+        if(pLevel.isClientSide()) {
+            return false;
+        }
+
         if(recipeItems.get(0).test(pContainer.getItem(1))) {
             return recipeItems.get(1).test(pContainer.getItem(2));
         }
 
         return false;
     }
-
     @Override
     public ItemStack assemble(SimpleContainer pContainer) {
         return output;
@@ -107,22 +110,6 @@ public class CobaltBlasterRecipe implements Recipe<SimpleContainer> {
                 ing.toNetwork(buf);
             }
             buf.writeItemStack(recipe.getResultItem(), false);
-        }
-
-        @Override
-        public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
-            return INSTANCE;
-        }
-
-        @Nullable
-        @Override
-        public ResourceLocation getRegistryName() {
-            return ID;
-        }
-
-        @Override
-        public Class<RecipeSerializer<?>> getRegistryType() {
-            return Serializer.castClass(RecipeSerializer.class);
         }
 
         @SuppressWarnings("unchecked") // Need this wrapper, because generics

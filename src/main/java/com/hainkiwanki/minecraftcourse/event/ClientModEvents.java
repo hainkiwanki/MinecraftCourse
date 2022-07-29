@@ -8,8 +8,6 @@ import com.hainkiwanki.minecraftcourse.block.entity.client.PedestalBlockEntityRe
 import com.hainkiwanki.minecraftcourse.entity.ModEntityTypes;
 import com.hainkiwanki.minecraftcourse.entity.client.RaccoonRenderer;
 import com.hainkiwanki.minecraftcourse.entity.client.TigerRenderer;
-import com.hainkiwanki.minecraftcourse.entity.custom.ModBoatRenderer;
-import com.hainkiwanki.minecraftcourse.fluid.ModFluids;
 import com.hainkiwanki.minecraftcourse.screen.CobaltBlasterScreen;
 import com.hainkiwanki.minecraftcourse.screen.ModMenuTypes;
 import com.hainkiwanki.minecraftcourse.util.ModItemProperties;
@@ -44,16 +42,11 @@ public class ClientModEvents {
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_WINDOW.get(), RenderType.translucent());
 
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_BLOCK.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLUID.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.translucent());
-
         ModItemProperties.addCustomItemPorperties();
         MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
         WoodType.register(ModWoodTypes.CHERRY_BLOSSOM);
 
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
         EntityRenderers.register(ModEntityTypes.TIGER.get(), TigerRenderer::new);
-        EntityRenderers.register(ModEntityTypes.BOAT_ENTITY.get(), ModBoatRenderer::new);
     }
 }

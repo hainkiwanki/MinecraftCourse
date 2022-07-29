@@ -2,6 +2,7 @@ package com.hainkiwanki.minecraftcourse.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -19,34 +20,33 @@ public class SpeedyBlock extends Block {
     }
 
     @Override
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, Random pRandom) {
+    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
         float chance = 0.35f;
 
         if(chance < pRandom.nextFloat()) {
             pLevel.addParticle(ParticleTypes.SMOKE, pPos.getX() + pRandom.nextDouble(),
                     pPos.getY() + 0.5D, pPos.getZ() + pRandom.nextDouble(),
-                    0d, 0.015d + pRandom.nextDouble(0.075d), 0d);
+                    0d, 0.015d + pRandom.nextDouble(), 0d);
         }
 
         if(chance < pRandom.nextFloat()) {
             pLevel.addParticle(ParticleTypes.SMOKE, pPos.getX() + pRandom.nextDouble(),
                     pPos.getY() + 0.5D, pPos.getZ() + pRandom.nextDouble(),
-                    0d, 0.015d + pRandom.nextDouble(0.075d), 0d);
+                    0d, 0.015d + pRandom.nextDouble(), 0d);
         }
 
         if(chance < pRandom.nextFloat()) {
             pLevel.addParticle(ParticleTypes.SMOKE, pPos.getX() + pRandom.nextDouble(),
                     pPos.getY() + 0.5D, pPos.getZ() + pRandom.nextDouble(),
-                    0d, 0.015d + pRandom.nextDouble(0.075d), 0d);
+                    0d, 0.015d + pRandom.nextDouble(), 0d);
         }
 
         if(chance < pRandom.nextFloat()) {
             pLevel.addParticle(ParticleTypes.SMOKE, pPos.getX() + pRandom.nextDouble(),
                     pPos.getY() + 0.5D, pPos.getZ() + pRandom.nextDouble(),
-                    0d, 0.015d + pRandom.nextDouble(0.075d), 0d);
+                    0d, 0.015d + pRandom.nextDouble(), 0d);
         }
     }
-
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         if(!pLevel.isClientSide()) {
