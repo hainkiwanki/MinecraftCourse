@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/door_top",
+  "render_type": "minecraft:cutout",
   "textures": {
     "top": "minecraftcourse:block/cherry_blossom_door_top",
     "bottom": "minecraftcourse:block/cherry_blossom_door_bottom"
